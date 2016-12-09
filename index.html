@@ -2,34 +2,67 @@
   <head>
     <title>The Feature Flags Club</title>
     <style>
+     * { margin: 0; }
+     html, body { height: 100%; }
      body {
        font-family: -apple-system, BlinkMacSystemFont, sans-serif;
      }
+     #main {
+       min-height: 100%;
+       margin-bottom: -60px;
+       overflow: hidden;
+     }
+     #main:after {
+       content: '';
+       display: block;
+     }
+
      h1, h3 { text-align: center; }
      h1 {
-       font-size: 300px;
+       font-size: 200px;
        margin-bottom: 20px;
      }
      h3 {
-       font-size: 40px;
+       font-size: 20px;
        font-weight: 300;
        max-width: 70%;
        margin: 0px auto;
      }
+
+     @media(min-width: 500px) {
+       h1 {
+         font-size: 300px;
+       }
+       h3 {
+         font-size: 40px;
+       }
+     }
+
      a {
        text-decoration: none;
+     }
+     a:visited { color: #0000ee; }
+     footer {
+       padding-left: 20px;
+       height: 60px;
+       line-height: 60px;
+       background-color: #efefef;
+       width: 100%;
      }
     </style>
   </head>
   <body>
-    <h1 id="days"></h1>
-    <h3>
-      Days since someone has been referred to
-      <a href="https://github.com/etsy/feature">github.com/etsy/feature</a> and
-      told to just ignore the part where it says the project is archived
-    </h3>
+    <div id="main">
+      <h1 id="days"></h1>
+      <h3>
+        Days since someone has been referred to
+        <a href="https://github.com/etsy/feature">github.com/etsy/feature</a> and
+        told to just ignore the part where it says the project is archived
+      </h3>
+    </div>
     <footer>
-
+      By <a href="https://twitter.com/mcfunley">Dan McKinley</a>.
+      <a href="https://github.com/mcfunley/featureflags.club">Pull requests accepted.</a>
     </footer>
     <script>
      var last = new Date('2016-12-09');
