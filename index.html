@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <title>The Feature Flags Club</title>
+    <style>
+     body {
+       font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+     }
+     h1, h3 { text-align: center; }
+     h1 {
+       font-size: 300px;
+       margin-bottom: 20px;
+     }
+     h3 {
+       font-size: 40px;
+       font-weight: 300;
+       max-width: 70%;
+       margin: 0px auto;
+     }
+     a {
+       text-decoration: none;
+     }
+    </style>
+  </head>
+  <body>
+    <h1 id="days"></h1>
+    <h3>
+      Days since someone has been referred to
+      <a href="https://github.com/etsy/feature">github.com/etsy/feature</a> and
+      told to just ignore the part where it says the project is archived
+    </h3>
+    <footer>
+
+    </footer>
+    <script>
+     var last = new Date('2016-12-09');
+     var days = Math.floor((new Date() - last) / (86400 * 1000));
+     document.getElementById('days').innerText = days;
+    </script>
+  </body>
+</html>
